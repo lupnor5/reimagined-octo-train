@@ -11,7 +11,8 @@ Ejemplo 2:
     Output = None   
 """
 
-def two_sum(nums, target): 
+
+def two_sum(nums, target):
     result = []
     aux = {}
     for i in range(0, len(nums)):
@@ -19,7 +20,6 @@ def two_sum(nums, target):
             result.append(aux[nums[i]])
             result.append(i)
             return result
-        else: 
-            aux[target-nums[i]] = i
+        else:
+            aux[target - nums[i]] = i
     return None
-        

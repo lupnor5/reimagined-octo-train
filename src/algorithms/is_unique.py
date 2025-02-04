@@ -5,20 +5,17 @@ isUnique("abcde") => True
 isUnique("abcded") => fase
 """
 
-#Esta es una solucion optima con complejidad 0(n)
 
-def is_unique(string):
-    if len(string) > 128: #complejidad 0(1)
-       return False
-    aux = {}
-    i=0
-    for chr in string: 
-     if chr in aux: 
+# This is the optimal solution with complexity O(n)
+def is_unique(s):
+    if len(s) > 128:  # complexity 0(1)
         return False
-     else:
-        aux[chr]=i
-        i+=1
+    aux = {}
+    i = 0
+    for char in s:
+        if char in aux:
+            return False
+        else:
+            aux[char] = i
+            i += 1
     return True
-
-        
-
